@@ -1,0 +1,14 @@
+version: '3'
+services:
+  ubuntu-nginx-wordpress:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:80
+    restart: always
+    privileged: true
+    tty: true
+    environment:
+      GCS_BUCKET_NAME: bloggers-static-bucket
+      GCP_CREDENTIALS: '{"type": "service_account","project_id": "wordpress-sites-391121","private_key_id": "9f7e2a22d22821d16ba4194a32b37658720bea58","private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCQsHFgF64IJnr6\nzBUDskQ4+0n7l+cwBPtmeuljyFOA6BpA1CUd9SOTNkpQopy8vFTnGPj9kKYvzg7C\nV6VabzVrslt54reXtSkmg7yAapefRye+Eng0jOMsk1kOGVRxGxDb9FV//jIS+n+K\nrU6hujhp0NjBb7Mo0/we892ThzyfhUa73ahSaqQ2Opbxs883LN4r04K3xW7H6KZQ\ne0exf4epxU2+vl4Bl3h4JFYa/jNWzlBv63W9q0FFJp9gQ1fL98lHjRw04X+jfYAp\nFfhPWBhvWnDMmrM9MJvdO4fCfMJIiyrIEm6NlSa4qPCELA1oQIxGt6Fi89Jync/9\nq9hR0RHbAgMBAAECggEAFv4C4OCXxjHJ5HrJHW+W9HByPunSUh4ojmNvx8HOCzOs\nSwBV7vRv38qGdVkx4QgTJy91Dw43v8GrNL+AG5Ev2FpdEPmxxQjZGNwMTg0iOlcF\n/hKp9BKDXdJYb4DKRg2lWIlI4PBVqBBoc3K7hmsKNekl2K9VtWI3s/olYXaMb/4c\n+C1N1/tRrPGs9tg0Hm0hD9TPDkupJOkGCtQKbJs4dN+/cTcvSTYbAMKJxhjI+7+Y\nXWeXx5zUsEUerK9RRarAQ50JmMeCGor6CwrwQ9GojI14VZ58aIkcUUrXEWl7FydZ\nkmv8gb4IefE/ovVCtuED8Rf1pktXDMBYuaZsmpj/WQKBgQDE5DfhIH71k21RjiQn\nxh4BkNBEzhY5kRRRvitp/XYTxroFD68HcRb4LhMWA9taCIxK4UsD/dmc1gvBHX9u\nJwBYx7SS9CSSeHDwDy8BWow7pLS01YmgTXGUX+vjCvomqpdxESVkPXRwsSd8yEnF\n9Nzh413WTxi3Oh9ESzIo1Rcm7wKBgQC8IE3EgjMoQCXKkzqP3m50lfO5ujET2epX\nFR3HcwT1/pYz31StrgXd7omBoB14wtE/Rka1iCbAonwpxZR++jkMl1i3IGDBwYbh\n6G+8n0EsOcN22RC2d/KhI3psOwQVLF/qV6aTNs3CbVyfeclpIdWjVrXImMbLJfVU\nBSfY8HUj1QKBgFTXQnzv08VeUazi4xGAfU2PaS883rbPnUHcADkbztWWvHGR4IoE\nYTFwKSlDYDHbnRhnHDwMFslOMqJ0Y4TDqZKX+2eXbGrxGzlWUZrzuZm5z2Rc34ED\n3f1hl/Ottz0SJU/DY6leEd69d5Z9d8ylRsjPgI/oZW4OzYpQHL0blW5hAoGAWrqd\npvNAJt5hG4TMDoyw6qtTIzSn7LIBMcRuWz2em+EPoa7I0QaHr9QWHx0QeahDcGe9\nPFmQjwEOLrsqdd7J2se3MoJ8B5YFLjiCgw6vSNwG5++h/s50hsBsj3wa6PdAvu1M\n2dzpeSZzMDp1J634sdDk1PzRizIgUkg2Qosdg40CgYBy7Bpk36qPwayYQWVp+u53\n96iaOoUc+bqnvZ1dtxDVIkH16N8R4Pa8GchivKmT9Ww6Q7XiIle4U0OTjnf3pjeU\nKFVb4G/k6dRprW7QWWj1LrDLAHoPtSlq+wHb5ROVvzQXdF+MHHqsgV4VHTTHW0Q3\n6294n2Y4vvUjelAlij+iRQ==\n-----END PRIVATE KEY-----\n","client_email": "accessor@wordpress-sites-391121.iam.gserviceaccount.com","client_id": "115403246791224363125","auth_uri": "https://accounts.google.com/o/oauth2/auth","token_uri": "https://oauth2.googleapis.com/token","auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/accessor%40wordpress-sites-391121.iam.gserviceaccount.com","universe_domain": "googleapis.com"}'
