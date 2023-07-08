@@ -15,7 +15,7 @@ RUN apt update && apt install gcsfuse
 
 ENV GCP_CREDENTIALS=
 ENV GCS_BUCKET_NAME=
-ENV MNT_DIR /mnt/gcs
+ENV MNT_DIR=/mnt/gcs
 
 RUN mkdir /mnt/gcs && echo "$GCP_CREDENTIALS" > /credentials.json
 RUN cat /credentials.json
